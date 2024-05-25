@@ -302,7 +302,7 @@ class Summary(Plugin):
             query = ""
             for i,summary in enumerate(reversed(summarys)):
                 query += summary + "\n----------------\n\n"
-            prompt = "你是一位群聊机器人，聊天记录已经在你的大脑中被你总结成多段摘要总结，你需要对它们进行摘要总结，最后输出一篇完整的摘要总结，用列表的形式输出。\n"
+            prompt = "你是一位群聊机器人，聊天记录已经在你的大脑中被你总结成多段摘要总结，你需要对它们进行摘要总结，最后输出一篇完整的摘要总结，用列表的形式输出。重点输出内容是总结每天新增任务和预计完成时间\n"
             
             session = self.bot.sessions.build_session(session_id, prompt)
             session.add_query(query)
